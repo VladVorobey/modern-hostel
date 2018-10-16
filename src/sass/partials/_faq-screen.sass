@@ -1,0 +1,62 @@
+.faq-screen
+	background: url("../img/faq-screen-bg.png") top center no-repeat
+	background-size: cover
+	width: 100%
+	padding-top: 30px
+	padding-bottom: 115px
+	+r(768)
+		padding-bottom: 60px
+	+r(576)
+		padding-bottom: 50px
+	.title
+		max-width: 470px
+		margin-bottom: 90px
+		+r(992)
+			margin-bottom: 60px
+		+r(768)
+			margin-bottom: 30px
+	&__drop
+		padding-left: 100px
+		+r(768)
+			padding-left: 0
+
+	&__head
+		padding-left: 60px
+		position: relative
+		padding-top: 35px
+		padding-bottom: 40px
+		font-size: 24px
+		font-weight: 500
+		color: $white
+		border-top: 1px solid #353434
+		cursor: pointer
+		+r(768)
+			padding-left: 30px
+			font-size: 18px
+			padding-top: 10px
+			padding-bottom: 10px
+		&::before
+			content: url('../img/plus.svg')
+			position: absolute
+			left: 0
+			width: 22px
+			height: 22px
+		&.active
+			display: block
+			&::before
+				content: url('../img/minus.svg')
+	&__toggle
+		padding-left: 60px
+		display: none
+		font-size: 16px
+		font-weight: 400
+		color: $silver
+		padding-bottom: 40px
+
+		+r(768)
+			font-size: 14px
+			padding-left: 0
+			padding-bottom: 15px
+		&_active
+			display: block
+

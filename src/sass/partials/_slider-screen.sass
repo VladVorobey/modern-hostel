@@ -1,0 +1,325 @@
+.slider-screen
+	min-height: 930px
+	background: url("../img/slider-screen-bg.png") center
+	background-size: cover
+	padding-top: 85px
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+	&__partners
+		padding-left: 45px
+		padding-right: 45px
+		+r(1200)
+			padding: 0
+		&_wrapper
+			overflow: hidden
+		&_title
+			h3
+				font-weight: 500
+				font-size: 22px
+				color: $white
+				margin-bottom: 50px
+				+r(768)
+					margin-bottom: 40px
+					font-size: 20px
+				+r(576)
+					font-size: 18px
+					margin-bottom: 30px
+	&__info
+		padding-left: 45px
+		padding-right: 35px
+		+r(1200)
+			padding: 0
+		strong
+			font-weight: 800
+			font-size: 96px
+			color: $fruit-salad
+			line-height: 1
+			display: block
+			width: 450px
+			+r(1200)
+				display: inline
+			+r(992)
+				font-size: 75px
+			+r(768)
+				font-size: 48px
+			+r(576)
+				display: block
+				font-size: 28px
+		p
+			font-weight: 600
+			font-size: 18px
+			color: $white
+			margin-bottom: 50px
+			+r(1200)
+				margin-bottom: 0
+			+r(768)
+				font-size: 16px
+			+r(576)
+				font-size: 14px
+				font-weight: 500
+			&:last-child
+				margin-bottom: 90px
+				+r(1200)
+					margin-bottom: 30px
+
+	&__slide
+		display: flex!important
+		flex-direction: column
+		+r(1200)
+			align-items: center
+		a
+			display: block
+			margin-bottom: 50px
+		img
+			filter: grayscale(100%)
+			transition: filter .3s ease-in
+			&:hover
+				filter: grayscale(0)
+	&__tabs
+		&_nav
+			padding-top: 50px
+			text-align: right
+			position: absolute
+			right: 15px
+			top: 0
+			z-index: 10
+			+r(768)
+				padding-top: 30px
+			+r(576)
+				position: relative
+				right: 0
+				text-align: center
+			.tab
+				margin-bottom: 20px
+				cursor: pointer
+				transition: all .3s ease
+				&.active
+					color: $fruit-salad
+					padding-right: 35px
+					position: relative
+					+r(576)
+						padding-right: 0
+					&:after
+						content: ''
+						background-color: $fruit-salad
+						width: 22px
+						height: 2px
+						position: absolute
+						right: 6px
+						top: 50%
+						transform: translateY(-50%)
+				&:hover, &:focus
+					color: $fruit-salad
+					position: relative
+		&_content
+
+			.tab_item
+				position: relative
+				margin-top: 95px
+				+r(768)
+					margin-top: 30px
+				&__info
+					padding-left: 100px
+					max-width: 470px
+					+r(768)
+						max-width: none
+						padding-left: 0
+						margin-bottom: 20px
+					p
+						font-size: 14px
+						font-weight: 400
+						color: $silver
+						margin-bottom: 25px
+					a
+						display: inline-block
+						font-weight: 500
+						font-size: 16px
+						color: $white
+						&:hover
+							text-decoration: underline
+						&:nth-child(2)
+							padding-right: 30px
+						&:nth-child(3)
+							padding-right: 30px
+						&:last-child
+							font-size: 13px
+							font-weight: 400
+							color: $silver
+							padding-left: 15px
+							position: relative
+							&:before
+								content: url("../img/email.svg")
+								width: 13px
+								height: 13px
+								position: absolute
+								left: 0
+								top: 60%
+								transform: translateY(-50%)
+				&__wrapper
+					display: flex
+					justify-content: space-between
+					position: relative
+					+r(768)
+						flex-wrap: wrap
+					+r(576)
+						justify-content: center
+				&__progress
+					display: flex
+					padding: 20px 10px
+					justify-content: space-around
+					align-items: center
+					border-top: 1px solid #323131
+					border-bottom: 1px solid #323131
+					min-width: 570px
+					margin-bottom: 40px
+					+r(768)
+						min-width: 510px
+					+r(576)
+						min-width: auto
+						width: 100%
+						flex-direction: column
+						padding: 0
+					p
+						display: inline-block
+						color: #767676
+						font-size: 12px
+						font-weight: 400
+						max-width: 70px
+						+r(576)
+							padding: 7px 0
+					progress[value]
+						appearance: none
+						width: 370px
+						height: 12px
+						background-color: transparent
+						+r(768)
+							width: 300px
+						+r(576)
+							width: 100%
+					progress[value]::-webkit-progress-bar
+						background-color: #1e1d1d
+						border-radius: 4px
+						box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset
+					progress[value]::-webkit-progress-value
+						background-color: $fruit-salad
+						border-radius: 4px
+						background-size: 35px 20px, 100% 100%, 100% 100%
+				&__price
+					text-align: right
+					+r(768)
+						position: absolute
+						right: 0
+						top: 0
+						transform: translateY(-70px)
+					+r(576)
+						transform: translateY(-140px)
+					p
+						font-size: 16px
+						font-weight: 600
+						color: $white
+						max-width: 150px
+						+r(992)
+							font-size: 14px
+						strong
+							font-size: 48px
+							color: $fruit-salad
+							font-weight: 800
+							+r(992)
+								font-size: 36px
+			h3
+				font-weight: 600
+				font-size: 22px
+				color: $white
+				padding-left: 100px
+				margin-bottom: 30px
+				+r(768)
+					padding-left: 0
+				+r(576)
+					text-align: center
+			.slider-for
+				position: relative
+				padding-right: 210px
+				padding-left: 90px
+				z-index: 1
+				+r(768)
+					padding-right: 140px
+					min-height: 220px
+				+r(576)
+					padding: 0
+					margin-bottom: 50px
+					padding-bottom: 10px
+				&__slide
+					img
+						max-width: 470px
+						max-height: 270px
+						+r(768)
+							width: 100%
+						+r(576)
+							max-width: none
+			.slider-nav
+				width: 180px
+				position: absolute
+				left: 0
+				top: 190px
+				height: 60px
+				z-index: 2
+				+r(768)
+					top: 80px
+				+r(576)
+					display: none
+				&__slide
+					cursor: pointer
+					img
+						width: 90px
+						height: 60px
+.slick-list
+	margin-bottom: 30px
+
+.slick-dots
+	position: absolute
+	bottom: 25px
+	left: 0
+	transform: translateX(-110px)
+	list-style: none
+	display: block
+	text-align: center
+	padding: 0
+	width: 100%
+	+r(1200)
+		transform: translateX(0)
+	li
+		position: relative
+		display: inline-block
+		cursor: pointer
+		button
+			display: block
+			padding: 3px 5px
+			background: none
+			outline: none
+			line-height: 0
+			font-size: 0
+			color: red
+			cursor: pointer
+			&:before
+				content: ""
+				display: block
+				height: 5px
+				width: 5px
+				box-sizing: border-box
+				border-radius: 50%
+				background: #959494
+				transition: all 0.1s ease
+			&:hover
+				&:before
+					background: #5a9f4e
+					width: 10px
+					height: 10px
+					transform: translateY(3px)
+		&.slick-active button:before
+			background: #5a9f4e
+			width: 10px
+			height: 10px
+			transform: translateY(3px)
+.wrapper
+

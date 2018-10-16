@@ -1,0 +1,121 @@
+.main-screen
+	padding-top: 260px
+	padding-bottom: 220px
+	background: url("../img/main-screen-bg.png") center no-repeat
+	background-size: cover
+	+r(992)
+		padding-top: 170px
+		padding-bottom: 100px
+	+r(576)
+		padding-top: 120px
+		padding-bottom: 100px
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 125px
+		+r(768)
+			justify-content: center
+			text-align: center
+			align-items: center
+			margin-bottom: 50px
+		+r(576)
+			margin-bottom: 20px
+	&__title
+		padding-top: 25px
+		h1
+			font-weight: 800
+			font-size: 72px
+			max-width: 600px
+			text-transform: uppercase
+			line-height: 1.3em
+			margin-bottom: 15px
+			+r(992)
+				font-size: 54px
+				max-width: 450px
+				margin-bottom: 0
+				line-height: 1.1em
+			+r(576)
+				font-size: 30px
+				max-width: 300px
+				margin: 0 auto
+		strong
+			font-size: 30px
+			font-weight: 500
+			color: $silver
+			padding-left: 60px
+			position: relative
+			+r(992)
+				font-size: 24px
+			+r(576)
+				font-size: 18px
+			&::before
+				content: ''
+				position: absolute
+				width: 81px
+				height: 3px
+				background: $fruit-salad
+				left: -40px
+				top: 50%
+				+r(576)
+					width: 40px
+					left: 0
+	&__price
+		margin-left: 110px
+		max-width: 400px
+		max-height: 250px
+		border-left: 4px solid $fruit-salad
+		display: inline
+		padding-left: 30px
+		padding-bottom: 30px
+		padding-top: 65px
+		position: relative
+		+r(1200)
+			margin-left: 0
+		+r(992)
+			position: absolute
+			right: 0
+			transform: scale(0.7) translateY(-20px)
+		+r(768)
+			position: relative
+			max-width: none
+			padding-top: 25px
+			padding-bottom: 25px
+			padding-left: 0
+			border-left: none
+		p
+			font-size: 30px
+			font-weight: 700
+			line-height: 1.6em
+			+r(768)
+				font-size: 24px
+			+r(576)
+				font-size: 18px
+		strong
+			font-size: 128px
+			font-weight: 800
+			+r(768)
+				font-size: 72px
+			+r(576)
+				font-size: 48px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			border-top: 4px solid $fruit-salad
+			border-right: 4px solid $fruit-salad
+			width: 246px
+			height: 33px
+			+r(768)
+				content: none
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 246px
+			height: 55px
+			border-right: 4px solid $fruit-salad
+			border-bottom: 4px solid $fruit-salad
+			+r(768)
+				content: none

@@ -1,0 +1,65 @@
+.blog-page
+	padding-top: 250px
+	padding-bottom: 80px
+	background: url("../img/blog-bg.jpg") repeat-y center 70px
+	+r(992)
+		padding-top: 120px
+	+r(768)
+		padding-top: 80px
+		padding-bottom: 50px
+	+r(576)
+		padding-bottom: 40px
+	&__content
+		padding-left: 100px
+		margin-bottom: 30px
+		position: relative
+		&::before
+			content: url("../img/blog-hover.svg")
+			font-size: 100px
+			color: red
+			position: absolute
+			width: 170px
+			height: 150px
+			right: -35px
+			top: -35px
+			z-index: 1
+			+r(768)
+				content: none
+		+r(992)
+			padding-left: 0
+		img
+			float: right
+			margin-left: 60px
+			max-width: 420px
+			height: auto
+			width: 100%
+			position: relative
+			display: inline-block
+
+			+r(992)
+				margin-left: 20px
+			+r(768)
+				float: none
+				width: auto
+				max-width: 100%
+				max-height: 400px
+				display: block
+				text-align: center
+				margin: 0 auto 30px
+		p
+			font-size: 16px
+			font-weight: 400
+			color: $white
+			margin-bottom: 20px
+			padding-right: 150px
+			line-height: 1.5em
+			+r(992)
+				padding-right: 0
+		h3
+			font-size: 24px
+			font-weight: 500
+			color: $white
+			padding-right: 150px
+			padding-left:
+			margin-top: 50px
+			margin-bottom: 20px

@@ -1,0 +1,59 @@
+<section class="calc-screen">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="title title__calc">
+          <h2>
+            Рассчитывайте стоимость
+            вашего проживания
+          </h2>
+        </div>
+        <div class="calc__wrapper">
+          <form class="calculator">
+            <p>
+              Выбор общежития
+            </p>
+            <select name="calc" id="choose" >
+              <option value="3" selected>Внуково</option>
+              <option value="4">Наро-Фоминск</option>
+              <option value="5">Селятино</option>
+              <option value="6">Подольск</option>
+              <option value="13">Одинцово</option>
+              <option value="15">Чехово</option>
+            </select>
+            <div class="calculator__time">
+              <label >
+
+                  Количество ночей
+
+                <input type="number" id="night" value="1" min="1">
+              </label>
+              <label>
+
+                  Количество человек
+
+                <input type="number" id="people" value="1" min="1">
+              </label>
+            </div>
+            <div class="calculator__price">
+              <p>Цена за сутки: <span class="price-day" id="price-to-day">
+              330
+              </span> руб.
+              </p>
+              <p>Цена за все: <span class="price-all" id="full-price">
+              330
+              </span> руб.
+              </p>
+            </div>
+
+          </form>
+        </div>
+        <div class="button button__calc">
+          <a href="#" class="modal_open">
+            Забронировать
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

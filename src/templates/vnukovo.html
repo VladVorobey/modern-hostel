@@ -1,0 +1,21 @@
+---
+title: modern-hostel3
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<header>
+{% include "pages/index/_main-nav.html" %}
+{% include "pages/vnukovo/_main-screen.html" %}
+</header>
+<main>
+{% include "pages/index/_slider-screen.html" %}
+{% include "pages/index/_first-screen.html" %}
+{% include "pages/index/_calc-screen.html" %}
+{% include "pages/vnukovo/_reviews.html" %}
+{% include "pages/vnukovo/_faq-screen.html" %}
+</main>
+{% include "pages/index/_footer.html" %}
+
+{% endblock %}

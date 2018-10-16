@@ -1,0 +1,88 @@
+.footer
+	&__contacts
+		padding-top: 55px
+		padding-bottom: 35px
+		+r(576)
+			padding-top: 30px
+			padding-bottom: 35px
+		.title
+			margin-bottom: 50px
+			+r(768)
+				margin-bottom: 30px
+		.social
+			+r(768)
+				text-align: center
+			.icon
+				fill: #7b7b7b
+				&:hover, &:focus
+					fill: $fruit-salad
+		p
+			display: inline-flex
+			flex-direction: column
+			margin-bottom: 30px
+			a
+				color: $white
+				font-weight: 500
+				display: inline-block
+				padding-right: 30px
+				strong
+					font-weight: 400
+					font-size: 12px
+					display: block
+					color: $boulder
+				&:hover
+					text-decoration: underline
+				&:last-child
+					padding-right: 0
+					strong
+						color: $fruit-salad
+			strong
+				font-weight: 400
+				font-size: 12px
+				display: block
+				color: $boulder
+		li
+			margin-bottom: 15px
+			a
+				display: block
+				color: $white
+				font-size: 16px
+				font-weight: 500
+				strong
+					display: block
+					font-size: 12px
+					font-weight: 400
+					color: #d5d5d5
+				&:hover
+					text-decoration: underline
+		ul
+			margin-bottom: 45px
+
+	#map
+		width: 1150px
+		height: 720px
+		+r(992)
+			width: 100%
+		+r(768)
+			height: 350px
+		+r(576)
+			height: 250px
+	&__wrapper
+		display: flex
+		padding-top: 15px
+		padding-bottom: 15px
+		align-items: center
+		justify-content: space-between
+		+r(992)
+			flex-wrap: wrap
+		.icon
+			margin-right: 5px
+			fill: #7b7b7b
+			&:hover, &:focus
+				fill: $fruit-salad
+		.copyright
+			font-size: 12px
+			color: $white
+			text-transform: uppercase
+			+r(576)
+				text-align: center

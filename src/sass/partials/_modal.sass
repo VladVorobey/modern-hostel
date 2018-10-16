@@ -1,0 +1,131 @@
+.modal
+	margin-top: 5%
+	background: url("../img/modal.jpg") center no-repeat
+	background-size: cover
+	width: 1170px
+	+r(1200)
+		width: auto
+	&_close
+		display: inline-block
+		cursor: pointer
+		position: relative
+		top: 10px
+		right: 20px
+		left: 97%
+	&__content
+		padding-top: 120px
+		padding-left: 120px
+		padding-right: 200px
+		padding-bottom: 80px
+		+r(1200)
+			padding: 120px 0 80px
+		+r(768)
+			padding-top: 50px
+			padding-bottom: 50px
+	h3
+		padding-top: 15px
+		font-size: 36px
+		font-weight: 700
+		color: $white
+		text-transform: uppercase
+		max-width: 280px
+		line-height: 1em
+		margin-bottom: 50px
+		+r(768)
+			margin-bottom: 30px
+	p
+		font-size: 16px
+		font-weight: 400
+		color: $silver
+		max-width: 290px
+		line-height: 1.5em
+		margin-bottom: 30px
+	.form
+		display: flex
+		flex-direction: column
+		input
+			border: none
+			border-bottom: 1px solid $silver
+			background: transparent
+			line-height: 3
+			border-radius: 0
+			font-size: 16px
+			font-weight: 400
+			font-family: $defoult-font
+			color: $white
+			outline: none
+			box-shadow: none
+			-webkit-appearance: none
+			-moz-appearance: none
+			margin-bottom: 30px
+
+			&:focus:required:invalid
+				border-color: $silver
+				color: $white
+				font-size: 16px
+				line-height: 3
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&:required:valid
+				color: $white
+				font-size: 16px
+				line-height: 3
+				outline: none
+				box-shadow: none
+				-webkit-appearance: none
+			&::placeholder
+				line-height: 3
+				color: $white
+				font-size: 16px
+				font-family: $defoult-font
+				font-weight: 400
+		label.error
+			transform: translateX(0) translateY(-25px)
+			background: $fruit-salad
+			padding: 5px 10px
+			color: $white
+			border-radius: 15px
+			width: 100%
+			&::before
+				content: ''
+				position: absolute
+				width: 10px
+				height: 10px
+				background: $fruit-salad
+				top: -5px
+				left: 20px
+				transform: translateX(-50%) rotate(45deg)
+
+		.button
+			margin-top: 20px
+			margin-bottom: 40px
+			display: inline-block
+			position: relative
+			color: $white
+			font-weight: 600
+			background: $fruit-salad
+			border: 3px solid $fruit-salad
+			transition: all .3s ease
+			font-size: 24px
+			padding: 26px 65px
+			border-radius: 45px
+			max-width: 270px
+			+r(768)
+				margin: 20px auto 40px
+				padding: 15px 65px
+			&:hover
+				transition: all .3s ease
+				background: transparent
+				color: $fruit-salad
+	&__thanks
+		text-align: center
+		padding-top: 120px
+		padding-bottom: 80px
+		+r(768)
+			padding-top: 50px
+			padding-bottom: 50px
+		h3
+			max-width: none
+		p
+			max-width: none

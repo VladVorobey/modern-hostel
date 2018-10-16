@@ -1,0 +1,32 @@
+<div id="modal" class="modal">
+  <div class="container">
+    <div class="modal_close">
+      x
+    </div>
+    <div class="modal__content">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Заполните форму</h3>
+          <p>и наш менеджер свяжется с вами
+            в ближайшее время!</p>
+        </div>
+        <div class="col-md-6">
+          <form action="sendmail.php" method="get" class="form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="tel" placeholder="Ваш телефон" required>
+            <button type="submit" class="button" name="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="thanks" class="modal">
+  <div class="thanks_close modal_close">x</div>
+  <div class="modal__thanks">
+    <h3>Спасибо за заказ</h3>
+    <p>Скоро мы Вам перезвоним!</p>
+  </div>
+</div>

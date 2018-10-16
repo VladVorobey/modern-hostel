@@ -1,0 +1,161 @@
+section
+	position: relative
+
+.clearfix:before,
+.clearfix:after
+	content: ''
+	display: table
+
+.clearfix:after
+	clear: both
+
+.clearfix
+	zoom: 1 /* For IE 6/7 hasLayout */
+
+.logo
+	max-width: 70px
+	max-height: 70px
+	a
+		display: inline-block
+		position: relative
+	img
+		width: 70px
+		height: 70px
+
+.button
+	a
+		display: inline-block
+		color: $white
+		font-weight: 600
+		background: $fruit-salad
+		border: 3px solid $fruit-salad
+		transition: all .3s ease
+		&:hover
+			transition: all .3s ease
+			background: transparent
+			color: $fruit-salad
+	&__main-screen
+		display: block
+		text-align: right
+		transform: translateX(-210px)
+		a
+			font-size: 24px
+			padding: 26px 65px
+			border-radius: 45px
+		+r(992)
+			text-align: center
+			transform: translateX(0)
+		+r(576)
+			a
+				font-size: 18px
+				padding: 15px 30px
+	&__slider-screen
+		display: block
+		text-align: right
+		a
+			padding: 8px 16px
+			border-radius: 45px
+		+r(768)
+			text-align: center
+	&__calc
+		a
+			padding: 17px 34px
+			border-radius: 45px
+			font-size: 16px
+			font-weight: 700
+		+r(768)
+			text-align: center
+	&__footer
+		a
+			padding: 15px 35px
+			font-size: 16px
+			border-radius: 45px
+			font-weight: 700
+			margin-bottom: 50px
+			+r(768)
+				margin-bottom: 30px
+		+r(768)
+			text-align: center
+	&__blog
+		a
+			transition: all .3s ease
+			background: transparent
+			color: $white
+			padding: 15px 55px
+			font-size: 16px
+			border-radius: 45px
+			font-weight: 700
+			&:hover
+				background: $fruit-salad
+				color: $white
+				transform: translateY(2px)
+		+r(768)
+			text-align: center
+.title
+	h2
+		font-weight: 400
+		font-size: 48px
+		color: $white
+		line-height: 1.2em
+		+r(992)
+			font-size: 36px
+		+r(768)
+			font-size: 30px
+		+r(576)
+			font-size: 24px
+	&__first-screen
+		margin-bottom: 78px
+		+r(992)
+			margin-bottom:  50px
+		+r(768)
+			margin-bottom:  30px
+		+r(576)
+			margin-bottom: 20px
+	&__slider-screen
+		text-align: right
+		+r(1200)
+			text-align: left
+			margin-bottom: 70px
+		+r(992)
+			margin-bottom:  50px
+		+r(768)
+			margin-bottom: 30px
+		+r(576)
+			margin-bottom: 20px
+	&__calc
+		margin-bottom: 35px
+	&__blog
+		text-transform: uppercase
+		max-width: 600px
+		margin-bottom: 170px
+		h2
+			font-weight: 800
+		+r(992)
+			margin-bottom: 120px
+		+r(768)
+			max-width: none
+		+r(576)
+			margin-bottom: 30px
+	&__blog-page
+		text-transform: uppercase
+		margin-bottom: 110px
+		position: relative
+		h2
+			font-size: 72px
+			font-weight: 800
+		&:before
+			content: ''
+			width: 81px
+			height: 3px
+			position: absolute
+			background: $fruit-salad
+			bottom: -30px
+			left: -44px
+		+r(768)
+			margin-bottom: 60px
+	&__reviews
+		margin-bottom: 90px
+		+r(768)
+			margin-bottom: 60px
+		+r(576)
+			margin-bottom: 40px

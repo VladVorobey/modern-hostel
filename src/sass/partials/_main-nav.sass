@@ -1,0 +1,181 @@
+.main-nav
+	position: fixed
+	z-index: 1
+	width: 100%
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+	background: $mine-shaft
+	z-index: 1000
+	&__wrapper
+		min-height: 70px
+	&__content
+		display: flex
+		justify-content: space-between
+		width: 100%
+	&__nav
+		+r(992)
+			display: none
+		ul
+			display: flex
+			padding-left: 15px
+		a
+			display: inline-block
+			font-size: 16px
+			color: $white
+			font-weight: 500
+			padding: 25px
+			transition: color .3s
+			&:hover
+				color: $fruit-salad
+				transition: color .3s
+	&__adaptive
+		display: none
+		+r(992)
+			display: inline
+		&_tel
+			display: none
+			+r(576)
+				display: inline
+	&__contacts
+		+r(576)
+			display: none
+		ul
+			display: flex
+			li
+				padding: 17px 25px 17px 260px
+				+r(1200)
+					padding-left: 100px
+				+r(768)
+					padding:   17px 10px
+				&:nth-child(2)
+					padding-left: 30px
+					strong
+						color: $fruit-salad
+					+r(768)
+						padding-left: 10px
+		a
+			color: $white
+			font-weight: 500
+			display: block
+			strong
+				font-weight: 400
+				font-size: 12px
+				display: block
+				color: $boulder
+			&:hover
+				text-decoration: underline
+		p
+			strong
+				font-weight: 400
+				font-size: 12px
+				display: block
+				color: $boulder
+		&_footer
+			ul
+				li
+					padding: 17px 25px
+					+r(1200)
+						padding-left: 0
+					&:nth-child(2)
+						padding-left: 0
+						+r(768)
+							padding-left: 0
+.drp-btn
+	position: relative
+	width: 80px
+	border-right: 1px solid rgba(255, 255, 255, 0.1)
+	border-left: 1px solid rgba(255, 255, 255, 0.1)
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+	transition: all .3s
+	cursor: pointer
+
+	&:hover
+		background: $fruit-salad
+		.line
+			background: $mine-shaft
+			&::before, &::after
+				background: $mine-shaft
+	&.active
+		background: $fruit-salad
+		.line
+			background: $mine-shaft
+			&::before, &::after
+				background: $mine-shaft
+		ul
+			a
+				color: $white
+	.line
+		top: 50%
+		left: 27px
+		position: absolute
+		width: 15px
+		height: 2px
+		background-color: $fruit-salad
+		transform: translateY(-50%)
+		&::before, &::after
+			content: ''
+			height: 2px
+			background-color: $fruit-salad
+			position: absolute
+		&::before
+			top: -6px
+			width: 25px
+		&::after
+			top: 6px
+			width: 20px
+	ul
+		transition: all .3s
+		width: 100%
+		min-width: 780px
+		justify-content: space-between
+		position: absolute
+		bottom: 0
+		left: -143px
+		z-index: -1
+		opacity: 0
+		display: none
+		&.active
+			transform: translateY(64px)
+			transition: all .3s
+			display: flex
+			position: absolute
+			width: 100%
+			min-width: 780px
+			justify-content: space-between
+			opacity: 1
+			background-color: $mine-shaft
+			+r(992)
+				flex-direction: column
+				top: 6px
+				left: 0
+				background-color: transparent
+				li
+					max-width: 180px
+					a
+						padding: 10px 10px
+						background: $mine-shaft
+						border-bottom: 1px solid $fruit-salad
+					&:nth-last-child(-n+3)
+						a
+							background: $fruit-salad
+							color: $white
+							font-weight: 500
+							border-bottom: 1px solid $mine-shaft
+			+r(576)
+				text-align: right
+				left: -100px
+		li
+			padding: 0
+			color: $white
+			transition: all ease .3s
+
+			&:hover
+				background: $fruit-salad
+				transition: all ease .5s
+				a
+					color: $mine-shaft
+					transition: all ease .3s
+			a
+				color: $white
+				display: block
+				padding: 21px 20px
+
